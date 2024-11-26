@@ -1,0 +1,139 @@
+
+
+
+:root {
+    --white: #f8f8ff;
+}
+
+.notification--info {
+    --bg: #E5EFFA;
+    --border: #016BE175;
+    --primary: #016BE1;
+}
+
+.notification--failure {
+    --bg: #FCEDEA;
+    --border: #EC4E2C75;
+    --primary: #EC4E2C;  
+}
+
+.notification--warning {
+    --bg: #FEF7EA;
+    --border: #EF940075;
+    --primary: #EF9400;
+}
+
+.notification--success {
+    --bg: #EBF7EE;
+    --border: #3FBF6275;
+    --primary: #3FBF62;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 
+        sans-serif;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 0.5rem;
+}
+
+
+.notification {
+    min-width: 22rem;
+    margin-left: auto; 
+    margin-right: auto;
+    border-radius: 0.6rem;
+    background: var(--bg);
+    color: var(--primary);
+    border: 1.5px solid 
+        var(--border);
+    box-shadow: 0 1px 5px 
+        rgba(0, 0, 0, 0.05);
+    transform: translateY(
+        1.875rem);
+    opacity: 0;
+    padding: 0.125rem;
+    visibility: hidden;
+    animation: fade-in 3s
+     linear;
+}
+
+.notification__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    padding: 0.35rem;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+}
+
+.notification__icon svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    stroke-width: 2;
+    stroke: var(--white);
+}
+
+.notification__body {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.notification__progress {
+    position: absolute;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    width: calc(100% - 1rem);
+    height: 0.15rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(
+        to right, 
+        var(--bg),  
+        var(--border)
+    );
+    border-radius: inherit;
+    animation: progress 2.5s 
+        0.3s linear;
+}
+
+@keyframes fade-in {
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    95% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes progress {
+    to {
+        transform: scaleX(1);
+    }
+}
