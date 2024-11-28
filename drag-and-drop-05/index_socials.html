@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drag & drop</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="columns">
+        <div class="column">
+            <div class="column__header">
+                <h2>To Do</h2>
+                <div class="column__actions">
+                    <button type="button"><!-- svg --></button>
+                    <button type="button"><!-- svg --></button>
+                </div>
+            </div>
+            <div id="tasks--todo">
+                <article class="task">
+                    <header>
+                        <!-- svg --><h3>UI Updates</h3>
+                    </header>
+                    <div class="tags">
+                        <div class="tag tag--frontend">
+                            Frontend
+                        </div>
+                        <div class="tag tag--design">
+                            Design
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="profile profile--jm">
+                            <img 
+                                src="assets/james.jpg" 
+                                alt="James Xander"
+                            >
+                        </div>
+                        <span>
+                            Today - Nov 28
+                        </span>
+                    </footer>
+                </article>
+                <!-- more tasks -->
+            </div>
+        </div>
+        <!-- more columns  -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js">
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
